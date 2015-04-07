@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GestionListasMVCWeb.Models;
 
 namespace GestionListasMVCWeb.Controllers
 {
@@ -33,17 +34,14 @@ namespace GestionListasMVCWeb.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Alta()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(new Alumno());
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Alta(Alumno alumno)
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
